@@ -139,6 +139,7 @@ class App(QMainWindow):
                            "border: 3px solid black;")
             self.show
             return False
+    # wait function
     def wait(self):
         for i in range(1, 200):
             print(i)
