@@ -1,3 +1,11 @@
+''' 
+ @author (Ahmed Abdullahi)
+ @date (5/12/2023)
+ @ new to PyQt5 first project
+
+'''
+
+
 import sys
 from PyQt5.QtWidgets import (QMainWindow, QApplication,
                              QWidget, QPushButton,QAction,
