@@ -55,7 +55,7 @@ class App(QMainWindow):
 
         self.show()
     
-    @pyqtSlot()
+    #@pyqtSlot()
     def on_click(self):
         QApplication.processEvents()
 
@@ -72,15 +72,15 @@ class App(QMainWindow):
         self.match()
         QApplication.processEvents()
       
-    def set_User_word(self,word):
-        self.word1 = word
+    def set_User_word(self,wordone):
+        self.word1 = wordone
     def get_User_word(self):
         print("Your word: ",self.word1)
     def word_to_find(self):
         word = ["cool","time","more"]
         
-        self.wordToFind = word
-        print("Looking for:",random.choice(self.wordToFind))
+        self.wordToFind = random.choice(word)
+        print("Looking for:",self.wordToFind)
     def match(self):
         if(self.wordToFind == self.word1):
             QApplication.processEvents()
@@ -114,7 +114,7 @@ class App(QMainWindow):
     # wait function
     def wait(self):
         for i in range(1, 200):
-            print(i)
+            #print(i)
             # Sleep five seconds in total
             for _ in range(5 * 10):
                 # Process events between short sleep periods
