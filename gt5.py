@@ -17,14 +17,14 @@ class App(QMainWindow):
     def __init__(self):
         super().__init__()
         self.title = 'Guess the Word'
-        self.left = 500
-        self.top = 300
-        self.width = 400
-        self.height = 140
+        self.left = 1000
+        self.top = 100
+        self.width = 500
+        self.height = 340
         self.points = 0
         self.initUI()
         self.bg()
-        self.word1 = "word"
+        self.word1 = ""
         self.wordToFind = ""
         self.get_User_word()
         self.match()
@@ -55,8 +55,8 @@ class App(QMainWindow):
 
         self.show()
     
-    #@pyqtSlot()
-    def on_click(self):
+    @pyqtSlot()
+    def on_click(self,):
         QApplication.processEvents()
 
         value1 = self.textbox1.text()
@@ -78,7 +78,6 @@ class App(QMainWindow):
         print("Your word: ",self.word1)
     def word_to_find(self):
         word = ["cool","time","more"]
-        
         self.wordToFind = random.choice(word)
         print("Looking for:",self.wordToFind)
     def match(self):
