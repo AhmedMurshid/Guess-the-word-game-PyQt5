@@ -13,7 +13,7 @@ from PyQt5.QtWidgets import *
 import random
 from TextBox import TestBox
 class App(QMainWindow):
-
+#test
     def __init__(self):
         super().__init__()
         self.title = 'Guess the Word'
