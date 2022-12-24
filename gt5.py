@@ -47,7 +47,7 @@ class App(QMainWindow):
         # Create a button in the window
         self.button = QPushButton('Enter', self)
         self.button.setStyleSheet("background-color: white;")
-        self.button.move(90,80)
+        self.button.move(90,300)
         
         # connect button to function on_click
         self.button.clicked.connect(self.on_click)
@@ -68,7 +68,9 @@ class App(QMainWindow):
         self.points
         self.set_User_word(word)
         self.word_to_find()
+        
         self.get_User_word()
+
         self.match()
         QApplication.processEvents()
       
