@@ -64,7 +64,9 @@ class App(QMainWindow):
         value3 = self.textbox3.text()
         value4 = self.textbox4.text()
         #QMessageBox.question(self, 'Message - enter', "You typed: " + value1, QMessageBox.Ok)
-        word = (value1+value2+value3+value4)
+        word = ((value1)+""+value2+""+value3+""+value4)
+        print("the firsr letter:", value1)
+        print("the word u picked",word)
         self.points
         self.set_User_word(word)
         self.word_to_find()
@@ -78,6 +80,7 @@ class App(QMainWindow):
         self.word1 = wordone
     def get_User_word(self):
         print("Your word: ",self.word1)
+        
     def word_to_find(self):
         word = ["cool","time","more"]
         self.wordToFind = random.choice(word)
