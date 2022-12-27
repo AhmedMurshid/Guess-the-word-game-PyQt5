@@ -44,6 +44,8 @@ class App(QMainWindow):
         self.textbox2 = TestBox.textb(self,150,20)
         self.textbox3 = TestBox.textb(self,210,20)
         self.textbox4 = TestBox.textb(self,270,20)
+        self.textbox5 = TestBox.textb(self,320,20)
+
         # Create a button in the window
         self.button = QPushButton('Enter', self)
         self.button.setStyleSheet("background-color: white;")
@@ -55,7 +57,7 @@ class App(QMainWindow):
 
         self.show()
     
-    @pyqtSlot()
+    #@pyqtSlot()
     def on_click(self,):
         QApplication.processEvents()
 
