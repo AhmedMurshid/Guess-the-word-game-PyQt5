@@ -40,16 +40,21 @@ class App(QMainWindow):
 
         # connect button to function on_click
         # self.button.clicked.connect(AppFunctions.on_click(text1,text2,text3,text4, wordToFind = self.word_to_find))
-        self.button.clicked.connect(lambda: AppFunctions.on_click(self, w1 = text1, w2 = text2, w3 = text3, w4 = text4, wordToFind = self.word_to_find))
+        wordToFind = self.word_to_find()
+        # self.button.clicked.connect(lambda: AppFunctions.on_click(self, w1 = text1, w2 = text2, w3 = text3, w4 = text4, wordToFind))
+        # self.button.clicked.connect(lambda _, w1=text1, w2=text2, w3=text3, w4=text4: AppFunctions.on_click(self, w1, w2, w3, w4, wordToFind))
+        self.button.clicked.connect(lambda _, w1=text1, w2=text2, w3=text3, w4=text4: AppFunctions.on_click(self, w1, w2, w3, w4, self.word_to_find()))
+
+
 
         self.show()
     def word_to_find(self):
             word = ["cool","time","more"]
-            self.word_to_find.append(word)
-            self
-            wordToFind = random.choice(word)
-            print("Looking for:", wordToFind)
-            return wordToFind
+            # wordToFind.append(word)
+            
+            wordToFind1 = random.choice(word)
+            print("Looking for:", wordToFind1)
+            return wordToFind1
     def wait(self):
             for i in range(1, 200):
                 # Sleep five seconds in total

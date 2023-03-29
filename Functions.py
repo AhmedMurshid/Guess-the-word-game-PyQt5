@@ -20,6 +20,8 @@ class AppFunctions():
         word = (""+(value1)+""+value2+""+value3+""+value4)
         print("the first letter:", value1)
         print("the word u picked",word)
+        print("Looking for:", wordToFind)
+
         
         if wordToFind == word:
             # points += 1
@@ -33,7 +35,7 @@ class AppFunctions():
             self.setStyleSheet("background-color:green;"
                                 "border: 3px solid black;")
             # wait()
-            for i in range(1, 200):
+            for i in range(1, 500):
                 # Sleep five seconds in total
                 for _ in range(5 * 10):
                     # Process events between short sleep periods
@@ -47,7 +49,7 @@ class AppFunctions():
             self.setStyleSheet("background-color:red;"
                                 "border: 3px solid black;")
             # wait()
-            for i in range(1, 200):
+            for i in range(1, 500):
                 # Sleep five seconds in total
                 for _ in range(5 * 10):
                     # Process events between short sleep periods
